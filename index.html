@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashish Verma | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+   #intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+#intro img {
+  width: 18rem;   /* 288px */
+  height: 18rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  border: none; /* remove if previously added */
+}
+
+
+#intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#intro p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #cbd5e1;
+}
+
+#intro a {
+  background-color: #2563eb;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#intro a:hover {
+  background-color: #1e40af;
+}
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
+    header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  padding-top: 80px; /* Adjust based on header height */
+}
+
+    nav a {
+      color: #f8fafc;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #38bdf8;
+    }
+    section {
+      transition: all 0.3s ease-in-out;
+    }
+    h2 {
+      color: #38bdf8;
+    }
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #1e293b;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    footer {
+      background-color: #1e293b;
+      color: #94a3b8;
+    }
+    input, textarea {
+      background-color: #1e293b;
+      color: #f1f5f9;
+      border: 1px solid #475569;
+    }
+    input:focus, textarea:focus {
+      border-color: #38bdf8;
+      outline: none;
+      box-shadow: 0 0 0 1px #38bdf8;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 9999px;
+      object-fit: cover;
+      border: 4px solid #38bdf8;
+      margin: 0 auto 1rem;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-item {
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+    }
+    #contact {
+  background: linear-gradient(to right, #0f172a, #0f172a);
+  padding: 4rem 1rem;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #1e293b;
+}
+
+.contact-links a:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-[#1e293b] to-[#0f172a] shadow-md text-white">
+  <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Ashish Verma</h1>
+    <nav class="space-x-4">
+      <a href="#intro" class="hover:text-blue-400">Home</a>
+      <a href="#about" class="hover:text-blue-400">About</a>
+      <a href="#projects" class="hover:text-blue-400">Projects</a>
+      <a href="#resume" class="hover:text-blue-400">Resume</a>
+      <a href="#contact" class="hover:text-blue-400">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <section id="intro" class="h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
+  <img src="image.jpg" alt="Ashish Verma" class="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-blue-500 shadow-xl mb-6" />
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Ashish Verma 👋</h1>
+  <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-6">
+    Full-Stack Developer | MERN Stack | Passionate about building scalable web solutions
+  </p>
+  <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-300">
+    Explore My Portfolio
+  </a>
+</section>
+
+
+
+
+  <!-- About Me -->
+  <section id="about" class="py-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <img src="profile.jpg" alt="Ashish Verma Profile Photo" class="profile-img">
+      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+      <p class="text-lg">
+        I'm a final-year B.Tech student with strong skills in full-stack development (MERN stack) and a passion for building efficient, scalable web applications. I'm actively seeking opportunities to apply my knowledge and collaborate on impactful projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+ <section id="projects" class="py-16 bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-semibold text-center mb-12">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-400 mb-2">Calorie Tracker Web App</h3>
+          <p class="text-sm text-gray-300">MERN stack app to track daily calories with authentication, dashboard, and RESTful APIs.</p>
+        </div>
+        <div class="px-6 pb-6">
+          <span class="text-xs text-gray-400">Tech: React, Node, Express, MongoDB</span>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-400 mb-2">Twitter Sentiment Analyzer</h3>
+          <p class="text-sm text-gray-300">Python + Flask app analyzing tweet sentiments using NLP, Twitter API, and MongoDB.</p>
+        </div>
+        <div class="px-6 pb-6">
+          <span class="text-xs text-gray-400">Tech: Python, Flask, NLP, MongoDB</span>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-400 mb-2">Real-Time Chat App</h3>
+          <p class="text-sm text-gray-300">React + Socket.io app for secure real-time chat with JWT authentication and MongoDB.</p>
+        </div>
+        <div class="px-6 pb-6">
+          <span class="text-xs text-gray-400">Tech: React, Socket.io, Node, MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume -->
+  <section id="resume" class="py-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">Resume</h2>
+      <p class="mb-4">Click below to view or download my full resume.</p>
+      <a href="ASHISH_RESUME.pdf" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" target="_blank">View Resume</a>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+ <section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-links">
+    <a class="contact-item" href="mailto:ashishsarraf1234@gmail.com">
+      📧 ashishsarraf1234@gmail.com
+    </a>
+    <a class="contact-item" href="https://www.linkedin.com/in/ashish-verma-600227257/" target="_blank">
+      🔗 LinkedIn Profile
+    </a>
+    <a class="contact-item" href="tel:+917525912518">
+      📞 +91-7525912518
+    </a>
+  </div>
+</section>
+
+
+  <footer class="text-center py-6 text-sm">
+    &copy; 2025 Ashish Verma. All rights reserved.
+  </footer>
+</body>
+
+</html>
